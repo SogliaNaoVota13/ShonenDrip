@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Usuário</title>
+    <link rel="stylesheet" href="../css/cadUsuario.css">
+    <script src="../js/cadUsuario.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <img src="" alt="Logo" class="logo-img" onclick="window.location = '../index.html'">
+        </h1>
+        <nav class="nav">
+            <a href="../index.html">Login</a>
+            <a href="">Produtos</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+
+    <section id="main" class="main-cadastro">
+        <div class="cadastro-box" id="cadastro">
+            <h2>Insira seus dados</h2>
+            <form>
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="telefone" placeholder="Telefone" required>
+                <input type="text" id="cpf" placeholder="CPF" required>
+                <input type="text" id="identidade" placeholder="RG (opcional)">
+                <input type="password" id="senha" placeholder="Criar senha" required>
+                <button type="submit" id="btnCadUsuario">Cadastre-se</button>
+                <p>Já possui cadastro? <a href="../index.html">Clique Aqui</a></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 ShonenDrip. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
