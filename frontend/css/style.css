@@ -27,11 +27,12 @@ body {
 
 .header .logo img,
 .logo-img {
-    width: 130px;
+    width: 120px;
     cursor: pointer;
 }
 
 .nav a {
+    font-size: 1.2rem;
     color: #333;
     margin-left: 25px;
     text-decoration: none;
