@@ -1,4 +1,5 @@
 let btnLogin = document.getElementById('btnLogin')
+let btnLogout = document.getElementById('btnLogout')
 
 btnLogin.addEventListener('click', (e) => {
     e.preventDefault()
@@ -31,7 +32,7 @@ btnLogin.addEventListener('click', (e) => {
 
             if (!dados.token) {
                 res.innerHTML = dados.message || 'Erro ao realizar login, shinobi!'
-                res.style.color = 'red'
+                res.style.color = 'purple'
                 res.style.textAlign = 'center'
                 return
             }
@@ -45,14 +46,20 @@ btnLogin.addEventListener('click', (e) => {
             setTimeout(() => {
                 // Redirecionar conforme tipo
                 if (dados.usuario.tipo === 'ADMIN') {
-                    location.href = './html/home.html'
+                    location.href = './pages/painelAdm.html'
                 } else {
-                    location.href = './html/loja.html'
+                    location.href = './pages/loja.html'
                 }
-            }, 1500)
+            }, 1000)
         })
         .catch((err) => {
             console.error('Falha ao fazer login!', err)
             alert(err.message)
         })
+})
+btnLogout.addEventListener("click", (e) => {
+    e.preventDefault()
+    sessionStorage.clear()
+    localStorage.clear()
+    window.alert('logout efetuado com sucesso!')
 })

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Produto</title>
+    <script src="../js/gerProduto.js" defer></script>
+    <link rel="stylesheet" href="../css/painelAdm.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <img src="../imgs/logo.png" alt="Logo" class="logo-img" onclick="window.location = '../index.html'">
+        </h1>
+        <nav class="nav">
+            <a href="../pages/painelAdm.html">Voltar</a>
+        </nav>
+    </header>
+
+    <section class="main-painel">
+
+        <div class="painel-box painel-gerenciar">
+
+            <h2>Gerenciar Produtos</h2>
+            <p>Atualize, movimente estoque ou exclua produtos abaixo</p>
+
+            <div class="gerenciar-container">
+
+                <!-- ATUALIZAR -->
+                <div class="gerenciar-card">
+                    <h1>Atualizar Produto</h1>
+
+                    <form id="formAtualizar">
+                        <input type="number" id="codProduto" placeholder="Código do produto">
+
+                        <h3>Novos Dados</h3>
+
+                        <input type="text" id="nome" placeholder="Nome" required>
+                        <input type="text" id="descricao" placeholder="Descrição">
+                        <input type="text" id="modelo" placeholder="Modelo" required>
+                        <input type="text" id="preco" placeholder="Preço " required>
+                        <input type="text" id="imagem_url" placeholder="URL da imagem">
+
+                        <button type="submit" id="btnAtualizarProduto">Atualizar</button>
+                    </form>
+                </div>
+
+                <!-- ESTOQUE -->
+                <div class="gerenciar-card">
+                    <h1>Movimentar Estoque</h1>
+
+                    <form id="formEstoque">
+                        <input type="number" id="idProduto" placeholder="Código do produto" required>
+
+                        <select id="tipo" required>
+                            <option value="">Tipo de movimentação</option>
+                            <option value="ENTRADA">Entrada (+)</option>
+                            <option value="SAIDA">Saída (-)</option>
+                        </select>
+
+                        <input type="number" id="qtdeMovimento" placeholder="Quantidade" required>
+
+                        <button type="submit" id="btnMovimentar">Aplicar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- EXCLUIR -->
+            <div class="gerenciar-card delete-card">
+                <h1>Apagar Produto</h1>
+
+                <form id="formDelete">
+                    <input type="number" id="codDelete" placeholder="Código do produto" required>
+                    <button type="submit" id="btnDelete">Apagar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+       <div class="table-wrapper">
+                <div class="tabela" id="resListar"></div>
+            </div>
+
+
+
+    <footer class="footer">
+        <p>© 2025 ShonenDrip. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

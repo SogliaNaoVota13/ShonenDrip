@@ -1,10 +1,10 @@
 const express = require('express')
 const router = express.Router()
 
-const { movimentar } = require('../controller/estoque.controller')
+const { movimentar } = require('../controllers/estoque.controller')
 
-const authMiddleware = require('../middleware/auth.middleware')
-const isAdminMiddleware = require('../middleware/isAdmin.middleware')
+const authMiddleware = require('../middlewares/auth.middleware')
+const isAdminMiddleware = require('../middlewares/isAdmin.middleware')
 
 router.post(
     '/',

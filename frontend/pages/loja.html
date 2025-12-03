@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja</title>
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/loja.css">
+    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon">
+    <script src="../js/loja.js"defer></script>
+    <title>ShonenDrip</title>
 </head>
+
 <body>
-    
-</body>
-</html>
+    <header class="header">
+        <h1 class="logo">
+            <a href="../index.html">
+                <img src="../imgs/logo.png" alt="Logo">
+            </a>
+        </h1>
+
+        <nav class="nav">
+            <a href="./sobre.html">Sobre</a>
+            <a href="../index.html">Voltar</a>
+             <button id="btnLogout" type="submit">Logout</button>
+             
+        </nav>
+        <button id="btnCarrinho" class="btn-cart">🛒 Carrinho</button>
+
+<div id="sideCart" class="side-cart">
+    <div class="cart-header">
+        <h2>Carrinho</h2>
+        <button id="closeCart">✖</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+        <p><strong>Total:</strong> R$ <span id="cartTotal">0.00</span></p>
+        <button class="finalizar">Finalizar Compra</button>
+    </div>
+</div>
+
+    </header>
+
+    <main class="shop-container">
+        <section class="top-bar">
+            <input type="text" id="searchInput" placeholder="Buscar produto...">
+
+
+            <select id="priceFilter">
+                <option value="default">Filtrar por preço</option>
+                <option value="min">Menor preço</option>
+                <option value="max">Maior preço</option>
+            </select>
+        </section>
+
+
+
+        <section id="productGrid" class="product-grid">
+            <!-- Produtos dinamicamente carregados -->
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <p>© 2025 ShonenDrip. Todos os direitos reservados.</p>
+    </footer>

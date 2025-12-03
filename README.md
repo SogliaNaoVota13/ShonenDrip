@@ -227,8 +227,8 @@ Body exemplo:
 
 ```json
 {
-  "nome": "Carlos",
-  "email": "carlos@gmail.com",
+  "nome": "Arthur",
+  "email": "arthur@gmail.com",
   "telefone": "11999999999",
   "cpf": "52998224725",
   "senha": "123"
